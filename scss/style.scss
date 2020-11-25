@@ -28,6 +28,7 @@ button {
 }
 
 .container {
+	position: absolute;
 	margin: 0 auto;
 	max-width: 1140px;
 	height: 100%;
@@ -165,6 +166,7 @@ button {
 	padding: 35px 40px;
 	display: flex;
 	justify-content: center;
+	position: relative;
 
 	&__btn-mode {
 		@extend %roboto;
@@ -199,15 +201,18 @@ button {
 		&__btn-mode {
 			flex-grow: 1;
 			margin-top: 10px;
+
 			& + & {
 				margin-left: 14px;
 			}
+
 			&:last-child {
 				margin-left: 0;
 			}
 		}
 	}
 }
+
 @media (max-width: 694px) {
 	.game-modes {
 		padding: 20px 0;
@@ -229,12 +234,14 @@ button {
 			font-size: 18px;
 			line-height: 21px;
 			padding: 10px 0px;
+
 			& + & {
 				margin-left: 0;
 			}
 		}
 	}
 }
+
 // === / header ===
 
 // === main ====
@@ -325,6 +332,7 @@ button {
 		}
 	}
 }
+
 // @media (max-width: 1024px) {
 // 	.main {
 
@@ -334,28 +342,35 @@ button {
 	.main {
 		min-height: 450px;
 	}
+
 	.question-block {
 		width: 100%;
+
 		&__answers-row {
 			align-items: center;
 			flex-direction: column;
+
 			& + & {
 				margin-top: 10px;
 			}
 		}
+
 		&__btn-answer {
 			width: 100%;
 			padding: 10px;
+
 			& + & {
 				margin-top: 10px;
 			}
 		}
 	}
 }
+
 @media (max-width: 375px) {
 	.main {
 		min-height: 380px;
 	}
+
 	.question-block {
 		&__inner {
 			//flex-direction: column;
@@ -369,6 +384,7 @@ button {
 			line-height: 26px;
 			//color: red;
 		}
+
 		&__btn-answer {
 			font-size: 16px;
 			line-height: 19px;
@@ -425,13 +441,16 @@ button {
 		}
 	}
 }
+
 @media (max-width: 556px) {
 	.statistic {
 		padding: 30px 0 20px;
+
 		&__inner {
 			height: 100%;
 			min-width: 100%;
 		}
+
 		&__title {
 			font-size: 20px;
 			line-height: 23px;
@@ -443,13 +462,16 @@ button {
 		}
 	}
 }
+
 @media (max-width: 375px) {
 	.statistic {
 		padding: 20px 0;
+
 		&__inner {
 			height: 100%;
 			min-width: 100%;
 		}
+
 		&__title {
 			font-size: 20px;
 			line-height: 23px;
