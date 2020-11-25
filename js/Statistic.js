@@ -29,15 +29,12 @@ export default class {
 		this.statisticData.correctAnswers += 1;
 		this.updateElementText(this.correctAnswersElement, this.statisticData.correctAnswers);
 		this.updateAccuracy();
-		console.log('correct');
 	}
 
 	addWrongAnswer() {
 		this.statisticData.wrongAnswers += 1;
 		this.updateElementText(this.wrongAnswersElement, this.statisticData.wrongAnswers);
 		this.updateAccuracy();
-		console.log('wrong');
-		//this.updateAllAndSave();
 	}
 
 	updateElementText(element, value, animate = true) {

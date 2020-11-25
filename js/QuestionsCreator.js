@@ -22,10 +22,10 @@ export default class {
 
 		// Some countries have '(Republic of)' or 'and ...' after their names. We can trim that to get shorter name
 		function trimName(name) {
-			return name
-				.replace(/\(.*\)/, '')
-				.replace(/and.*/, '')
-				.trim();
+			return name;
+			// .replace(/\(.*\)/, '')
+			// .replace(/and.*/, '')
+			// .trim();
 		}
 
 		// Getting 4 random countries
@@ -36,7 +36,6 @@ export default class {
 			wrongAnswers = [];
 		let rightAnswerCountry = this.getRightAnswerCountry();
 		let wrongAnswersCountries = this.getWrongAswersCountries();
-
 		switch (gameMode) {
 			case GAME_MODE.GUESS_CAPITAL:
 				questionText = questions[gameMode].replace('%1', trimName(rightAnswerCountry.name));
@@ -56,7 +55,7 @@ export default class {
 				break;
 			case GAME_MODE.GUESS_COUNTRY_BY_FLAG:
 				questionText = questions[gameMode];
-				rightAnswer = rightAnswerCountry.name;
+				rightAnswer = trimName(rightAnswerCountry.name);
 
 				wrongAnswersCountries.forEach((country) => {
 					wrongAnswers.push(country.name);
@@ -67,7 +66,6 @@ export default class {
 			wrongAnswers[i] = trimName(wrongAnswers[i]);
 		});
 		let question = new Question(questionText, trimName(rightAnswer), wrongAnswers);
-		console.log(question);
 		return question;
 	}
 

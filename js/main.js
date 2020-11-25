@@ -31,7 +31,6 @@ window.onload = () => {
 	function onQuestionBlockShown() {}
 
 	function onQuestionBlockHidden() {
-		console.log('hidden');
 		setTimeout(nextQuestion, 300);
 	}
 
@@ -39,7 +38,6 @@ window.onload = () => {
 	let countries;
 	loadCountries((loadedCountries) => {
 		countries = loadedCountries;
-		console.log(countries);
 
 		nextQuestion();
 	});
@@ -52,6 +50,7 @@ window.onload = () => {
 
 	function nextQuestion() {
 		setRandomGameMode();
+		console.log(gameMode);
 		questionBlock.bindQuestion(getNewQuestion(), questionNumber);
 
 		// We don't want to show flag when game mode is "GUESS COUNTRY"
@@ -86,7 +85,6 @@ window.onload = () => {
 
 	function setRandomGameMode() {
 		let gameModeIndex = Math.round(Math.random() * (gameModes.selectedGameModes.size - 1));
-		console.log(...gameModes.selectedGameModes);
 		gameMode = [...gameModes.selectedGameModes][gameModeIndex];
 	}
 
@@ -99,7 +97,6 @@ window.onload = () => {
 		if (countries) {
 			onCountriesLoaded(JSON.parse(countries));
 		} else {
-			console.log('fetching');
 			fetch('https://restcountries.eu/rest/v2/all')
 				.then((data) => data.json())
 				.then((data) => {

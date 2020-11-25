@@ -34,20 +34,11 @@ export default class {
 		if (this.isRightAnswerFound) return;
 
 		if (this.rightBtnIndex == index) {
-			console.log("That's right answer!");
 			this.handleRightAnswerBtnClick(btn);
 		} else {
-			console.log("That's wrong!");
 			this.handleWrongAnswerBtnClick(btn);
 		}
 		this.clickedBtns.add(btn);
-		// let hoverableBtnsCount = 0;
-		// this.answerBtns.forEach((btn) => {
-		// 	if (btn.classList.contains('question-block__btn-answer--hoverable')) hoverableBtnsCount++;
-		// });
-		// this.hoverableBtnsCount = hoverableBtnsCount;
-		// console.log(hoverableBtnsCount);
-		// if (this.hoverableBtnsCount == 1) this.showRightAnswer();
 
 		if (this.clickedBtns.size == this.answerBtns.length - 1) {
 			this.showRightAnswer();
@@ -137,7 +128,6 @@ export default class {
 	}
 
 	show(onShown) {
-		console.log('show');
 		this.questionBlock.classList.remove('animation-hide');
 		requestAnimationFrame(() => {
 			this.questionBlock.classList.add('animation-show');

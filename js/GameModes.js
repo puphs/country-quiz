@@ -2,16 +2,19 @@ export default class {
 	constructor(gameModesSelector) {
 		const gameModesContainer = document.querySelector(gameModesSelector);
 		const gameModeBtns = gameModesContainer.querySelectorAll('.game-modes__btn-mode');
-		this.selectedGameModes = new Set();
-
+		this.selectedGameModes = this.loadGameModes();
 		gameModeBtns.forEach((btn) => {
 			btn.addEventListener('click', () => {
 				this.onGameModeBtnClicked(btn);
 			});
-			if (btn.classList.contains('game-modes__btn-mode--active')) {
-				let gameMode = this.parseGameMode(btn.dataset.mode);
-				this.selectedGameModes.add(gameMode);
-			}
+			const btnGameMode = btn.dataset['mode'];
+			if (this.selectedGameModes.has(this.parseGameMode(btnGameMode)))
+				btn.classList.add('game-modes__btn-mode--active');
+			else btn.classList.remove('game-modes__btn-mode--active');
+			// if (btn.classList.contains('game-modes__btn-mode--active')) {
+			// 	let gameMode = this.parseGameMode(btn.dataset.mode);
+			// 	this.selectedGameModes.add(gameMode);
+			// }
 		});
 	}
 
@@ -27,6 +30,7 @@ export default class {
 			btn.classList.add('game-modes__btn-mode--active');
 			this.selectedGameModes.add(gameMode);
 		}
+		this.saveGameModes();
 	}
 
 	parseGameMode(gameModeStr) {
@@ -38,6 +42,28 @@ export default class {
 			case 'country-by-flag':
 				return GAME_MODE.GUESS_COUNTRY_BY_FLAG;
 		}
+	}
+
+	gameModeToString(gameMode) {
+		switch (gameMode) {
+			case GAME_MODE.GUESS_CAPITAL:
+				return 'capital';
+			case GAME_MODE.GUESS_COUNTRY:
+				return 'country';
+			case GAME_MODE.GUESS_COUNTRY_BY_FLAG:
+				return 'country-by-flag';
+		}
+	}
+
+	saveGameModes() {
+		localStorage.setItem('game-modes', JSON.stringify([...this.selectedGameModes]));
+	}
+
+	loadGameModes() {
+		return (
+			new Set(JSON.parse(localStorage.getItem('game-modes'))) ||
+			new Set([GAME_MODE.GUESS_COUNTRY_BY_FLAG])
+		);
 	}
 }
 
