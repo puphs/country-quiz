@@ -48,7 +48,7 @@ button {
 }
 
 .container {
-  position: absolute;
+  position: relative;
   margin: 0 auto;
   max-width: 1140px;
   height: 100%;
@@ -590,4 +590,3 @@ button {
     line-height: 61px;
   }
 }
-/*# sourceMappingURL=style.css.map */
