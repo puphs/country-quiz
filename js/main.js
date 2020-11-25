@@ -50,7 +50,6 @@ window.onload = () => {
 
 	function nextQuestion() {
 		setRandomGameMode();
-		console.log(gameMode);
 		questionBlock.bindQuestion(getNewQuestion(), questionNumber);
 
 		// We don't want to show flag when game mode is "GUESS COUNTRY"

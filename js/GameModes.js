@@ -60,10 +60,9 @@ export default class {
 	}
 
 	loadGameModes() {
-		return (
-			new Set(JSON.parse(localStorage.getItem('game-modes'))) ||
-			new Set([GAME_MODE.GUESS_COUNTRY_BY_FLAG])
-		);
+		let gameModes = new Set(JSON.parse(localStorage.getItem('game-modes')));
+		if (gameModes.size == 0) gameModes.add(GAME_MODE.GUESS_COUNTRY_BY_FLAG);
+		return gameModes;
 	}
 }
 
