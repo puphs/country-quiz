@@ -48,6 +48,7 @@ button {
 }
 
 .container {
+  position: absolute;
   margin: 0 auto;
   max-width: 1140px;
   height: 100%;
@@ -279,6 +280,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .game-modes__btn-mode {
