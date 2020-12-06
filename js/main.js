@@ -61,6 +61,7 @@ window.onload = () => {
 			function onFlagLoaded() {
 				questionBlock.show();
 				questionNumber++;
+				
 			}
 			// We can't play game if game mode is "GUESS COUNTRY BY FLAG" without flat
 			// So we trying to load new question
@@ -89,7 +90,6 @@ window.onload = () => {
 
 	function getCountryFlagSrc(countryCode) {
 		return `https://flagcdn.com/h40/${countryCode.toLocaleLowerCase()}.png`;
-		return `https://www.countryflags.io/${countryCode}/flat/64.png`;
 	}
 
 	function loadCountries(onCountriesLoaded = (countries) => {}) {
