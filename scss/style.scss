@@ -67,7 +67,6 @@ button {
 @keyframes wrong-answer {
 	0% {
 		background-color: $color-primary;
-		//transform: translateY(0px);
 	}
 
 	25% {
@@ -157,8 +156,6 @@ button {
 .animation-text-update {
 	animation: text-update 0.1s ease-in-out;
 }
-
-// =
 // === / animations ===
 
 // === header ===
@@ -177,7 +174,6 @@ button {
 		line-height: 26px;
 		border-radius: 45px;
 		min-width: 280px;
-		//transition: color 0.2s;
 		transition: color 0.17s;
 		transition: background-color 0.17s;
 
@@ -194,29 +190,26 @@ button {
 
 @media (max-width: 1024px) {
 	.game-modes {
-		//flex-basis: 100%;
-		flex-wrap: wrap;
 		margin-top: -10px;
+		flex-wrap: wrap;
+		flex-direction: row;
 
 		&__btn-mode {
+			flex-basis: 33%;
 			flex-grow: 1;
 			margin-top: 10px;
-
 			& + & {
 				margin-left: 14px;
 			}
-
 			&:last-child {
 				margin-left: 0;
 			}
 		}
 	}
 }
-
 @media (max-width: 694px) {
 	.game-modes {
 		padding: 20px 0;
-
 		flex-direction: column;
 
 		&__btn-mode {
@@ -230,7 +223,7 @@ button {
 @media (max-width: 375px) {
 	.game-modes {
 		&__btn-mode {
-			min-width: 220px;
+			width: 100%;
 			font-size: 18px;
 			line-height: 21px;
 			padding: 10px 0px;
@@ -241,7 +234,6 @@ button {
 		}
 	}
 }
-
 // === / header ===
 
 // === main ====
@@ -254,7 +246,6 @@ button {
 	background-color: #fff;
 	border-radius: 16px;
 	width: 518px;
-	//min-height: 320px;
 	margin: 37px auto 0;
 	position: relative;
 	box-shadow: rgba(0, 0, 0, 0.14) 0px 6px 12px 2px;
@@ -280,7 +271,7 @@ button {
 	}
 
 	&__country-flag {
-		top: -32px;
+		top: -20px;
 		position: absolute;
 		filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.26));
 	}
@@ -333,11 +324,6 @@ button {
 	}
 }
 
-// @media (max-width: 1024px) {
-// 	.main {
-
-// 	}
-// }
 @media (max-width: 556px) {
 	.main {
 		min-height: 450px;
@@ -373,7 +359,6 @@ button {
 
 	.question-block {
 		&__inner {
-			//flex-direction: column;
 			padding: 20px;
 		}
 
@@ -382,16 +367,12 @@ button {
 			margin-bottom: 20px;
 			font-size: 22px;
 			line-height: 26px;
-			//color: red;
 		}
 
 		&__btn-answer {
 			font-size: 16px;
 			line-height: 19px;
 			padding: 11px;
-			// & + & {
-			// 	margin-top: 10px;
-			// }
 		}
 	}
 }
@@ -414,7 +395,6 @@ button {
 	&__container {
 		display: flex;
 		flex-direction: column;
-		//width: 50%;
 		align-items: center;
 
 		& + & {
