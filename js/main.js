@@ -88,6 +88,7 @@ window.onload = () => {
 	}
 
 	function getCountryFlagSrc(countryCode) {
+		return `https://flagcdn.com/h40/${countryCode.toLocaleLowerCase()}.png`;
 		return `https://www.countryflags.io/${countryCode}/flat/64.png`;
 	}
 
