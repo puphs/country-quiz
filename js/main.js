@@ -56,12 +56,11 @@ window.onload = () => {
 		if (gameMode != GAME_MODE.GUESS_COUNTRY) {
 			const flagSrc = getCountryFlagSrc(questionsCreator.getRightAnswerCountry().alpha2Code);
 			questionBlock.setFlag(flagSrc, onFlagLoaded, onFlagNotLoaded);
-			questionBlock.setFlagVisibility(true);
 
 			function onFlagLoaded() {
 				questionBlock.show();
 				questionNumber++;
-				
+				questionBlock.setFlagVisibility(true);
 			}
 			// We can't play game if game mode is "GUESS COUNTRY BY FLAG" without flat
 			// So we trying to load new question
