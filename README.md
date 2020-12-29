@@ -1,8 +1,10 @@
 # country-quiz
-A small single page quiz game about countries, capitals and flags. <a href="https://puphs.github.io/country-quiz/index.html" target="_blank">Link to Github Pages</a>
+A small single page quiz game about countries, capitals and flags with statistics.<br/>
+It saves your game statistics in `localStorage` API.<br/>
+<a href="https://puphs.github.io/country-quiz/index.html">Try it with Github Pages</a>
 
 ## Preview
-<img src="https://media3.giphy.com/media/Tqnm8p2kaDRxL439pP/giphy.gif" alt="Country quiz preview"/>
+![Game preview](https://media3.giphy.com/media/Tqnm8p2kaDRxL439pP/giphy.gif)
 
 ## Made with
 * Vanilla Javascript
@@ -10,7 +12,7 @@ A small single page quiz game about countries, capitals and flags. <a href="http
 * HTML
 
 ## Used API's
-* <a href="https://flagcdn.com/">Flagcdn.com</a> - images of country flags
-* <a href="http://restcountries.eu/">restcountries.eu</a> - information about countries
+* ![Flagcdn.com](https://flagcdn.com) - images of country flags
+* ![restcountries.eu](http://restcountries.eu) - information about countries
 
 
