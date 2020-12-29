@@ -10,7 +10,7 @@ A small single page quiz game about countries, capitals and flags. <a href="http
 * HTML
 
 ## Used API's
-* <a href="https://flagcdn.com/">Flagcdn.com</a> - flag images
+* <a href="https://flagcdn.com/">Flagcdn.com</a> - images of country flags
 * <a href="http://restcountries.eu/">restcountries.eu</a> - information about countries
 
 
