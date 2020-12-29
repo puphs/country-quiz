@@ -1,6 +1,6 @@
 # country-quiz
-A small single page quiz game about countries, capitals and flags with statistics.<br/>
-It saves your game statistics in `localStorage` API.<br/>
+A small single page quiz game about countries, capitals and flags.<br/>
+Game supports 3 game modes, can save your game statistics in `localStorage` API.<br/>
 <a href="https://puphs.github.io/country-quiz/index.html">Try it with Github Pages</a>
 
 ## Preview
