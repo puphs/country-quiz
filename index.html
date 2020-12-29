@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- / fonts -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300;400&display=swap"
-    rel="stylesheet">
-  <!-- / fonts -->
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="module" src="js/main.js"></script>
+		<title>Country quiz</title>
+	</head>
 
-  <link rel="stylesheet" href="css/style.css">
-  <script type="module" src="js/main.js"></script>
-  <title>Country quiz</title>
-</head>
-
-<body>
-  <div class="container">
-    <header class="header">
-      <div class="game-modes animation-show">
-        <button class="game-modes__btn-mode" data-mode="capital">Guess the capital</button>
-        <button class="game-modes__btn-mode" data-mode="country">Guess the country</button>
-        <button class="game-modes__btn-mode" data-mode="country-by-flag">Guess country by
-          flag</button>
-      </div>
-    </header>
-    <main class="main">
-      <div class="question-block invisible">
-        <div class="question-block__inner">
-          <div class="question-block__question-number">#4</div>
-          <img class="question-block__country-flag" alt="Country flag">
-          <div class="question-block__question">What is the capital of Russia?</div>
-          <div class="question-block__answers">
-            <div class="question-block__answers-row">
-              <button class="question-block__btn-answer question-block__btn-answer--hoverable">United States</button>
-              <button class="question-block__btn-answer question-block__btn-answer--hoverable">United States of
-                America</button>
-            </div>
-            <div class="question-block__answers-row">
-              <button class="question-block__btn-answer question-block__btn-answer--hoverable">Russia</button>
-              <button class="question-block__btn-answer question-block__btn-answer--hoverable">Kazahstan</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <div class="statistic animation-show">
-      <div class="statistic__inner">
-
-        <div class="statistic__correct-and-wrong-container statistic__container">
-          <div class="statistic__title">
-            correct / wrong
-          </div>
-          <div class="statistic__content">
-            <div class="statistic__correct statistic__text">33</div>
-            <div class="statistic__delimiter statistic__text">/</div>
-            <div class="statistic__wrong statistic__text">18</div>
-          </div>
-
-        </div>
-        <div class="statistic__accuracy-container statistic__container">
-          <div class="statistic__title">accuracy</div>
-          <div class="statistic__content">
-            <div class="statistic__accuracy statistic__text">33%</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</body>
-
+	<body>
+		<div class="container">
+			<header class="header">
+				<div class="game-modes">
+					<button class="game-modes__btn-mode" data-mode="capital">Guess the capital</button>
+					<button class="game-modes__btn-mode" data-mode="country">Guess the country</button>
+					<button class="game-modes__btn-mode" data-mode="country-by-flag">
+						Guess country by flag
+					</button>
+				</div>
+			</header>
+			<main class="main">
+				<div class="question-block invisible">
+					<div class="question-block__inner">
+						<div class="question-block__question-number">#4</div>
+						<img class="question-block__country-flag" alt="Country flag" />
+						<div class="question-block__question">What is the capital of Russia?</div>
+						<div class="question-block__answers">
+							<div class="question-block__answers-row">
+								<button class="question-block__btn-answer question-block__btn-answer--hoverable">
+									United States
+								</button>
+								<button class="question-block__btn-answer question-block__btn-answer--hoverable">
+									United States of America
+								</button>
+							</div>
+							<div class="question-block__answers-row">
+								<button class="question-block__btn-answer question-block__btn-answer--hoverable">
+									Russia
+								</button>
+								<button class="question-block__btn-answer question-block__btn-answer--hoverable">
+									Kazahstan
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<div class="statistic">
+				<div class="statistic__inner">
+					<div class="statistic__correct-and-wrong-container statistic__container">
+						<div class="statistic__title">correct / wrong</div>
+						<div class="statistic__content">
+							<div class="statistic__correct statistic__text">33</div>
+							<div class="statistic__delimiter statistic__text">/</div>
+							<div class="statistic__wrong statistic__text">18</div>
+						</div>
+					</div>
+					<div class="statistic__accuracy-container statistic__container">
+						<div class="statistic__title">accuracy</div>
+						<div class="statistic__content">
+							<div class="statistic__accuracy statistic__text">33%</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
